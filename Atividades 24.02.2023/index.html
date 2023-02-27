@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Atividade 1
+
+        let Gato = {
+            nome: "Miante",
+            vidasRestantes: 2,
+            voa: false
+        }
+        console.log("Atividade 1:")
+        console.log(Gato)
+
+
+        //Atividade 2
+
+        let Pessoa = {
+            nome: "Marinalva",
+            meuNome: function () {
+                console.log("Meu nome é " + this.nome)
+                //o this é utilizado para evitar redundância, pois o atributo "nome" que a método está chamando já está dentro do mesmo objeto
+            }
+        }
+
+        console.log("Atividade 2:")
+        Pessoa.meuNome()
+
+
+        //Atividade 3
+
+        let primeiraPessoa = {
+            nome: "Pedrinho",
+            idade: 28
+        }
+
+        let segundaPessoa = {
+            nome: "Carlinha",
+            idade: 38
+        }
+
+        let maisVelho = ""
+        if (primeiraPessoa.idade > segundaPessoa.idade){
+            maisVelho = "O mais velho(a) é " + primeiraPessoa.nome
+        } else if (segundaPessoa.idade > primeiraPessoa.idade){
+            maisVelho =  "O mais velho(a) é " + segundaPessoa.nome
+        } else 
+            maisVelho = "Os dois possuem a mesma idade."
+
+        console.log("Atividade 3:")
+        console.log(primeiraPessoa)
+        console.log(segundaPessoa)
+        console.log(maisVelho)
+
+
+        //Atividade 4
+
+        let Funcionario1 = {
+            nome: "Josefino José",
+            salario: 4000
+        }
+
+        let Funcionario2 = {
+            nome: "Mariana Maria",
+            salario: 6000
+        }
+
+        let media = (Funcionario1.salario + Funcionario2.salario)/2
+
+        console.log("Atividade 4:")
+        console.log(Funcionario1)
+        console.log(Funcionario2)
+        console.log("Salário médio: "+ media)
+        
+
+        //Atividade 5
+
+        let retangulo = {
+            largura: 7,
+            altura: 5,
+            area: function () {
+                console.log("Área: " + (this.largura * this.altura))
+            },
+            perimetro: function () {
+                console.log("Perímetro: " + 2*(this.largura + this.altura))
+            },
+            diagonal: function () {
+                console.log("Diagonal: " + Math.sqrt(this.largura * this.largura + this.altura * this.altura))
+            }
+        }
+        
+        
+       console.log("Atividade 5:" + "\n" + "Retângulo:")
+       console.log(retangulo)
+
+       retangulo.area()
+       retangulo.perimetro()
+       retangulo.diagonal()
+       
+    </script>
+</body>
+</html>
